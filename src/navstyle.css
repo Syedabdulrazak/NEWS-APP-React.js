@@ -1,0 +1,39 @@
+.nav-item {
+  margin: 0.25rem 0.5rem;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 5px; /* To ensure space for the border animation */
+  color: black; /* Just for visibility */
+  text-decoration: none; /* Remove default underline */
+}
+.navbar-brand:hover{
+  transform: scale(1.1);
+  transition-duration: 0.5s;
+}
+/* Create a pseudo-element for the border animation */
+.nav-item::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background-color: #C197D2;
+  transition: width 0.3s ease;
+  z-index: -1; /* Place behind the text */
+}
+
+
+/* Animate the border on hover */
+.nav-item:hover::before {
+  width: 60%; 
+  /* Expand width on hover */
+}
+.nav-item .nav-link{
+  color: #E6E6FA !important;
+}
+.nav-item .nav-link:hover{
+  transform: scale(1.05);
+  color: #C197D2 !important;
+}
+
