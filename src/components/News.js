@@ -16,7 +16,7 @@ const News =(props)=> {
   const capitalize = (s)=> {
     return s[0].toUpperCase() + s.slice(1);
   }
-  document.title = `${capitalize(props.category)} - Samachar `;
+  document.title = `${capitalize(props.category)} - NewsToDay `;
 
   const updateNews= async ()=> {
     props.setProgress(10);
